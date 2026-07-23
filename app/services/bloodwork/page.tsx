@@ -23,7 +23,7 @@ const BloodworkPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <BloodworkContainer />
+      <BloodworkContainer faqs={data?.faqs} />
     </>
   );
 };

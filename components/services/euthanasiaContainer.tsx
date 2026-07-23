@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const EuthanasiaContainer = () => {
+export const EuthanasiaContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Quality of life consultations to help you assess your pet's comfort, pain levels, and overall well-being.",
     "A dedicated, quiet comfort space designed to provide a peaceful, stress-free setting for you and your pet.",
@@ -121,6 +122,7 @@ export const EuthanasiaContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

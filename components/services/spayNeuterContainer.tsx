@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const SpayNeuterContainer = () => {
+export const SpayNeuterContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Lower Risk of Hormone-Driven Aggression: Supports more stable behavioral patterns.",
     "Prevention of Unplanned Litters: Responsible population control and community health.",
@@ -132,6 +133,7 @@ export const SpayNeuterContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

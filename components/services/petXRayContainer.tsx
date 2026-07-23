@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const PetXRayContainer = () => {
+export const PetXRayContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Bone and joint imaging used to diagnose fractures, arthritis, and skeletal abnormalities.",
     "Injury and trauma evaluation to assess accidents or sudden mobility issues.",
@@ -130,6 +131,7 @@ export const PetXRayContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

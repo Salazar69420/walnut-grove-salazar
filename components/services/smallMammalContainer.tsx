@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const SmallMammalContainer = () => {
+export const SmallMammalContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Routine wellness examinations designed specifically for rabbits, guinea pigs, and other small mammals.",
     "Nutritional and habitat consultations to ensure optimal living conditions and balanced diets.",
@@ -127,6 +128,7 @@ export const SmallMammalContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

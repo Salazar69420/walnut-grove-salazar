@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const AnesthesiaContainer = () => {
+export const AnesthesiaContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Comprehensive pre-anesthetic examinations and testing to evaluate overall health before procedures.",
     "Individualized anesthetic protocols tailored to each patient's medical history and needs.",
@@ -129,6 +130,7 @@ export const AnesthesiaContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

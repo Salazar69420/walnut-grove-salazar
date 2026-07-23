@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const BoardingContainer = () => {
+export const BoardingContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Private and comfortable accommodations designed to provide a quiet and stress-free environment for each cat.",
     "Personalized daily care routines including feeding, litter maintenance, and attentive monitoring by our staff.",
@@ -133,6 +134,7 @@ export const BoardingContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

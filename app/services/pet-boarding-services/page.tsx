@@ -23,7 +23,7 @@ const BoardingPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <BoardingContainer />
+      <BoardingContainer faqs={data?.faqs} />
     </>
   );
 };

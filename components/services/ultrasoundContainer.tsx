@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const UltrasoundContainer = () => {
+export const UltrasoundContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Liver, kidneys, bladder, and gastrointestinal tract",
     "Abdominal masses, fluid buildup, or organ changes",
@@ -128,6 +129,7 @@ export const UltrasoundContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

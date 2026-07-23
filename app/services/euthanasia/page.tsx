@@ -23,7 +23,7 @@ const EuthanasiaPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <EuthanasiaContainer />
+      <EuthanasiaContainer faqs={data?.faqs} />
     </>
   );
 };

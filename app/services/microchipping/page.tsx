@@ -23,7 +23,7 @@ const MicrochippingPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <MicrochippingContainer />
+      <MicrochippingContainer faqs={data?.faqs} />
     </>
   );
 };

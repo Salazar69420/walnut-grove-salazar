@@ -23,7 +23,7 @@ const PreventativePage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <PreventativeContainer />
+      <PreventativeContainer faqs={data?.faqs} />
     </>
   );
 };

@@ -23,7 +23,7 @@ const UltrasoundPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <UltrasoundContainer />
+      <UltrasoundContainer faqs={data?.faqs} />
     </>
   );
 };

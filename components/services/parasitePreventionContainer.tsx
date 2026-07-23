@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const ParasitePreventionContainer = () => {
+export const ParasitePreventionContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Flea and tick prevention programs designed to provide year-round protection against external parasites.",
     "Heart-worm testing and preventative treatment plans to protect dogs and cats from serious cardiovascular disease.",
@@ -127,6 +128,7 @@ export const ParasitePreventionContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

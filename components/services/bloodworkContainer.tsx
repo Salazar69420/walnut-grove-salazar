@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const BloodworkContainer = () => {
+export const BloodworkContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Complete Blood Counts (CBC) to evaluate red and white blood cells and detect infections or anemia.",
     "Comprehensive chemistry panels assessing kidney, liver, electrolyte, and metabolic health.",
@@ -129,6 +130,7 @@ export const BloodworkContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

@@ -23,7 +23,7 @@ const PetSurgeryPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <PetSurgeryContainer />
+      <PetSurgeryContainer faqs={data?.faqs} />
     </>
   );
 };

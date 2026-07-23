@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const ChronicPainContainer = () => {
+export const ChronicPainContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Assessment and treatment of osteoarthritis and joint pain commonly seen in aging pets.",
     "Long-term pain monitoring and evaluation to adjust treatment plans as your pet's condition evolves.",
@@ -125,6 +126,7 @@ export const ChronicPainContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

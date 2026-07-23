@@ -14,6 +14,7 @@ export async function generateMetadata() {
 
 const AnesthesiaPage = async () => {
   const data = await getPageData("anesthesiaPage");
+  console.log("data", data);
   const schema = getServiceSchema(
     data?.metaData?.metaTitle || "Anesthesia",
     data?.metaData?.metaDescription ||
@@ -23,7 +24,7 @@ const AnesthesiaPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <AnesthesiaContainer />
+      <AnesthesiaContainer faqs={data?.faqs} />
     </>
   );
 };

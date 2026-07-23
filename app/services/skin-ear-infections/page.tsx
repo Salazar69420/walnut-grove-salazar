@@ -23,7 +23,7 @@ const SkinEarPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <SkinEarContainer />
+      <SkinEarContainer faqs={data?.faqs} />
     </>
   );
 };

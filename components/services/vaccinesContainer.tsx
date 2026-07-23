@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const VaccinesContainer = () => {
+export const VaccinesContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Core vaccinations for dogs and cats to protect against highly contagious and serious diseases.",
     "Lifestyle-based non-core vaccines recommended based on your pet's environment, travel, and exposure risks.",
@@ -126,6 +127,7 @@ export const VaccinesContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

@@ -23,7 +23,7 @@ const SmallMammalPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <SmallMammalContainer />
+      <SmallMammalContainer faqs={data?.faqs} />
     </>
   );
 };

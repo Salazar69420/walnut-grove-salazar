@@ -23,7 +23,7 @@ const ChronicPainPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <ChronicPainContainer />
+      <ChronicPainContainer faqs={data?.faqs} />
     </>
   );
 };

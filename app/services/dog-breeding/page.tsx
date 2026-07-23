@@ -23,7 +23,7 @@ const DogBreedingPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <DogBreedingContainer />
+      <DogBreedingContainer faqs={data?.faqs} />
     </>
   );
 };

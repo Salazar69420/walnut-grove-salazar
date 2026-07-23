@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const PuppyKittenContainer = () => {
+export const PuppyKittenContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Early-life wellness examinations to monitor growth, development, and overall health.",
     "Vaccination and deworming schedules carefully designed for young pets.",
@@ -129,6 +130,7 @@ export const PuppyKittenContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

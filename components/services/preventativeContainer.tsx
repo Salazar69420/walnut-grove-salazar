@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const PreventativeContainer = () => {
+export const PreventativeContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Comprehensive wellness examinations to monitor your pet's overall health and detect early signs of medical concerns.",
     "Age-based health screening recommendations tailored to puppies, adult pets, and senior companions.",
@@ -130,6 +131,7 @@ export const PreventativeContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

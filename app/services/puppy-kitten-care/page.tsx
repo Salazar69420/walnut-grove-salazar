@@ -23,7 +23,7 @@ const PuppyKittenPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <PuppyKittenContainer />
+      <PuppyKittenContainer faqs={data?.faqs} />
     </>
   );
 };

@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const DentalContainer = () => {
+export const DentalContainer = ({ faqs }: { faqs?: any[] }) => {
   const problems = [
     "Periodontal (gum) disease and plaque buildup",
     "Tooth decay and fractured or broken teeth",
@@ -177,6 +178,7 @@ export const DentalContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

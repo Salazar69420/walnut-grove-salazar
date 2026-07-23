@@ -23,7 +23,7 @@ const DentalPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <DentalContainer />
+      <DentalContainer faqs={data?.faqs} />
     </>
   );
 };

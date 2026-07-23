@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const MicrochippingContainer = () => {
+export const MicrochippingContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Safe and minimally invasive microchip placement performed during a routine appointment.",
     "Microchip registration guidance to ensure your pet's information is correctly stored in national databases.",
@@ -125,6 +126,7 @@ export const MicrochippingContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

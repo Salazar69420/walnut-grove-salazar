@@ -23,7 +23,7 @@ const VaccinesPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <VaccinesContainer />
+      <VaccinesContainer faqs={data?.faqs} />
     </>
   );
 };

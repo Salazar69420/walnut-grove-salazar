@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const DogBreedingContainer = () => {
+export const DogBreedingContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Reproductive health evaluations to assess breeding readiness and overall health.",
     "Breeding consultations and planning to support responsible breeding practices.",
@@ -126,6 +127,7 @@ export const DogBreedingContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

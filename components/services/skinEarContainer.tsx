@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const SkinEarContainer = () => {
+export const SkinEarContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Diagnosis and treatment of bacterial and yeast infections affecting the skin and ears.",
     "Evaluation and management of allergy-related skin conditions that cause itching and inflammation.",
@@ -126,6 +127,7 @@ export const SkinEarContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

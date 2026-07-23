@@ -23,7 +23,7 @@ const SoftTissuePage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <SoftTissueContainer />
+      <SoftTissueContainer faqs={data?.faqs} />
     </>
   );
 };

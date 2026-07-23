@@ -23,7 +23,7 @@ const PetXRayPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <PetXRayContainer />
+      <PetXRayContainer faqs={data?.faqs} />
     </>
   );
 };

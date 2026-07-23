@@ -6,8 +6,9 @@ import { CtaButton } from "../ui/ctaButton";
 import { AllServicesList } from "./allServicesList";
 import { RelatedServices } from "./relatedServices";
 import { Breadcrumbs } from "../shared/breadcrumbs";
+import { ServiceFaq } from "./serviceFaq";
 
-export const SoftTissueContainer = () => {
+export const SoftTissueContainer = ({ faqs }: { faqs?: any[] }) => {
   const points = [
     "Soft tissue surgical procedures to treat internal medical conditions and remove abnormal growths.",
     "Tumor and mass removal surgeries aimed at improving comfort and preventing complications.",
@@ -128,6 +129,7 @@ export const SoftTissueContainer = () => {
           </div>
         </div>
       </div>
+      <ServiceFaq faqs={faqs} />
       <RelatedServices services={relatedServices} />
       <AllServicesList />
     </div>

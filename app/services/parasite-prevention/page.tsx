@@ -23,7 +23,7 @@ const ParasitePreventionPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <ParasitePreventionContainer />
+      <ParasitePreventionContainer faqs={data?.faqs} />
     </>
   );
 };

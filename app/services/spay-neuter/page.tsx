@@ -23,7 +23,7 @@ const SpayNeuterPage = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <SpayNeuterContainer />
+      <SpayNeuterContainer faqs={data?.faqs} />
     </>
   );
 };

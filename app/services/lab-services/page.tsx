@@ -23,7 +23,7 @@ const LaboratoryTests = async () => {
   return (
     <>
       <JsonLd data={schema} />
-      <LaboratoryContainer />
+      <LaboratoryContainer faqs={data?.faqs} />
     </>
   );
 };
