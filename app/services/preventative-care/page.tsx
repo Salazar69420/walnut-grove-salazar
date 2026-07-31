@@ -8,12 +8,12 @@ import { JsonLd } from "@/components/shared/jsonLd";
 import { getServiceSchema } from "@/utils/schemaBuilder";
 
 export async function generateMetadata() {
-  const data = await getPageData("preventativePage");
+  const data = await getPageData("preventativeCarePage");
   return getMetadata(data, "/services/preventative-care");
 }
 
 const PreventativePage = async () => {
-  const data = await getPageData("preventativePage");
+  const data = await getPageData("preventativeCarePage");
   const schema = getServiceSchema(
     data?.metaData?.metaTitle || "Preventative Care",
     data?.metaData?.metaDescription ||
