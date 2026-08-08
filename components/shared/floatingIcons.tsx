@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import { LucideIcon, Phone } from "lucide-react";
 import { useModalStore } from "@/utils/store";
+import { GOOGLE_FORM_URL } from "@/utils/constants";
 
 type FloatingIconItem = {
   label: string;
@@ -19,9 +20,6 @@ type FloatingIconItem = {
 
 export const FloatingIcons = () => {
   const { openModal } = useModalStore();
-
-  const GOOGLE_FORM_URL =
-    "https://docs.google.com/forms/d/e/1FAIpQLSehUwbaqcTlwSin_brRmliAyTd3o4EvM7lk6baeJgzMfcszzw/viewform?usp=publish-editor";
 
   const icons: FloatingIconItem[] = [
     {
