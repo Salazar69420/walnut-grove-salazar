@@ -14,10 +14,14 @@ type FloatingIconItem = {
   href?: string;
   onClick?: () => void;
   isLucide?: boolean;
+  target?: string;
 };
 
 export const FloatingIcons = () => {
   const { openModal } = useModalStore();
+
+  const GOOGLE_FORM_URL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSehUwbaqcTlwSin_brRmliAyTd3o4EvM7lk6baeJgzMfcszzw/viewform?usp=publish-editor";
 
   const icons: FloatingIconItem[] = [
     {
@@ -35,14 +39,17 @@ export const FloatingIcons = () => {
       isLucide: true,
     },
     {
-      label: "Schedule",
+      label: "Request Appointment",
       icon: "/icons/calender.svg",
+      href: GOOGLE_FORM_URL,
+      target: "_blank",
       onClick: openModal,
     },
     {
       label: "Pet Supplies",
       icon: "/icons/petCare.svg",
       href: "https://www.myvetstore.ca/",
+      target: "_blank",
     },
     {
       label: "Pet Care Tips",
@@ -81,36 +88,39 @@ export const FloatingIcons = () => {
             </div>
 
             {/* Label Container - visible on mobile, expandable on desktop */}
-            <div className="lg:max-w-0 lg:group-hover:max-w-[240px] transition-all duration-500 ease-in-out overflow-hidden order-2 lg:order-1 mt-1 lg:mt-0">
-              <span className="text-white font-nunito font-bold text-[10px] lg:text-[16px] text-center lg:text-left whitespace-nowrap lg:whitespace-nowrap px-1 lg:pl-6 lg:pr-2 block leading-tight">
+            <div className="lg:max-w-0 lg:group-hover:max-w-[280px] transition-all duration-500 ease-in-out overflow-hidden order-2 lg:order-1 mt-1 lg:mt-0">
+              <span className="text-white font-nunito font-bold text-[10px] lg:text-[16px] text-center lg:text-left whitespace-normal lg:whitespace-nowrap px-1 lg:pl-6 lg:pr-2 block leading-tight">
                 {item.label}
               </span>
             </div>
           </div>
         );
 
-        if (item.onClick) {
+        if (item.href) {
+          const isExternal = item.href.startsWith("http");
           return (
-            <button
+            <Link
               key={index}
+              href={item.href}
+              target={item.target || (isExternal ? "_blank" : "_self")}
+              rel={isExternal ? "noopener noreferrer" : undefined}
               onClick={item.onClick}
-              className="group flex items-center justify-end bg-transparent p-0 border-none outline-none cursor-pointer"
-              aria-label={item.label}
+              className="group flex items-center justify-end"
             >
               {buttonContent}
-            </button>
+            </Link>
           );
         }
 
         return (
-          <Link
+          <button
             key={index}
-            href={item.href || "#"}
-            target={item.isLucide ? "_blank" : "_self"}
-            className="group flex items-center justify-end"
+            onClick={item.onClick}
+            className="group flex items-center justify-end bg-transparent p-0 border-none outline-none cursor-pointer"
+            aria-label={item.label}
           >
             {buttonContent}
-          </Link>
+          </button>
         );
       })}
     </div>

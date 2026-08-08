@@ -38,7 +38,11 @@ export const CtaButton = ({
     const textContent = getTextFromChildren(children).toLowerCase();
     console.log(textContent);
 
-    if (textContent.includes("schedule")) {
+    if (
+      textContent.includes("schedule") ||
+      textContent.includes("request") ||
+      textContent.includes("appointment")
+    ) {
       e.preventDefault();
       openModal();
     } else if (onClick) {
