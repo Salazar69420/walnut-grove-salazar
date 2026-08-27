@@ -38,8 +38,8 @@ const HomeContainer = ({ team }: { team?: any[] }) => {
               Genuine Compassion.
             </h1>
             <p className="mt-4 text-primary-black text-[14px] lg:text-[20px] leading-[1.2] font-nunito font-semibold max-w-[700px]">
-              We offer Langley’s pets specialized care with clear communication and
-              genuine compassion. Our goal is to keep them healthy and happy
+              We offer Langley’s pets specialized care with clear communication
+              and genuine compassion. Our goal is to keep them healthy and happy
               every day.
             </p>
           </div>
@@ -51,7 +51,7 @@ const HomeContainer = ({ team }: { team?: any[] }) => {
         <div className="absolute bottom-8 lg:bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col lg:flex-row gap-4 lg:gap-8 px-6 w-full lg:w-[90%] max-w-[1296px] justify-center">
           {[
             {
-              stat: "500+",
+              stat: "10000+",
               label: "Cases",
               sub: "Served over 500+ pets!",
             },

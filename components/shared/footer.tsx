@@ -171,7 +171,7 @@ const Footer = () => {
             </h4>
             <div className="flex gap-4 justify-center lg:justify-end">
               <Link
-                href="https://www.instagram.com/walnutgroveanimalhospital/"
+                href="https://www.instagram.com/walnutgroveanimalhospitalbc/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary-green/20 p-2.5 rounded-xl cursor-pointer hover:bg-primary-green/30 transition-colors"
@@ -180,7 +180,7 @@ const Footer = () => {
                 <Instagram size={28} className="text-primary-green" />
               </Link>
               <Link
-                href="https://www.facebook.com/walnutgroveanimalhospitalga/"
+                href="https://www.facebook.com/walnutgroveanimalhospitalbc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary-green/20 p-2.5 rounded-xl cursor-pointer hover:bg-primary-green/30 transition-colors"

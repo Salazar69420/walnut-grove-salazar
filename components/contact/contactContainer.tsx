@@ -9,12 +9,9 @@ import { FormInput } from "../ui/formInput";
 
 const HOSPITAL_PHONE = "(604) 888-2628";
 const HOSPITAL_PHONE_TEL = "+16048882628";
-const EMERGENCY_PHONE = "(604) 514-1711";
-const EMERGENCY_PHONE_TEL = "+16045141711";
 
 export const ContactContainer = () => {
   const [hospitalCopied, setHospitalCopied] = useState(false);
-  const [emergencyCopied, setEmergencyCopied] = useState(false);
   const [formState, setFormState] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
@@ -103,70 +100,56 @@ export const ContactContainer = () => {
       />
 
       <div className="max-w-[1100px] mx-auto px-6 lg:px-4 md:pb-24">
-        {/* Emergency Section */}
+        {/* Hospital Location & Hours Section */}
         <div className="mt-12 lg:mt-16 mb-12 lg:mb-16">
-          <div className="flex flex-col lg:flex-row items-center lg:items-center gap-4 mb-10 lg:mb-8 text-center lg:text-left">
-            <Image
-              src="/assets/medical.svg"
-              alt="emergency"
-              width={40}
-              height={40}
-              className="w-[32px] lg:w-[40px] h-auto"
-            />
-            <h2 className="text-[24px] lg:text-[32px] font-otomanopee-one text-primary-black uppercase tracking-wide">
-              In Case Of An Emergency
+          <div className="w-full max-w-[784px] mx-auto bg-[#FFFCF7] rounded-[24px] lg:rounded-[16px] p-6 lg:p-8 shadow-[0px_0px_30px_0px_rgba(87,87,86,0.08)] border border-[#F0EAF8]">
+            <h2 className="font-nunito font-bold text-[22px] lg:text-[24px] text-primary-black mb-3 pb-2 border-b-[3px] border-[#E7D2FF] w-fit">
+              Our Location & Working Hours
             </h2>
-          </div>
+            <p className="text-[14px] font-nunito font-medium text-primary-black leading-[160%] mb-4">
+              In the event of an emergency during our normal office hours,
+              please proceed directly to our practice and call while on the way.
+            </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6">
-            {/* During Hospital Hours */}
-            <div className="bg-[#FFFCF7] rounded-[16px] p-5 shadow-[0px_0px_30px_0px_rgba(87,87,86,0.08)] border border-[#F0EAF8]">
-              <h3 className="font-nunito font-bold text-[20px] text-primary-black mb-3 pb-2 border-b-[3px] border-[#E7D2FF] w-fit">
-                During Hospital Hours
-              </h3>
-              <p className="text-[14px] font-nunito font-medium text-primary-black leading-[160%] mb-4">
-                In the event of an emergency during our normal office hours,
-                please proceed directly to our practice and call while on the
-                way, if possible.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 mb-4">
-                {/* Map */}
-                <div className="w-full sm:flex-1 rounded-[10px] overflow-hidden h-[150px] sm:h-[100px]">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10435.947027458502!2d-122.65553799218746!3d49.16285959999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d22c82a4bc57%3A0x6a99a60503a6347e!2sWalnut%20Grove%20Animal%20Hospital%20Langley!5e0!3m2!1sen!2sus!4v1729006985870!5m2!1sen!2sus"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                  <a
-                    href="https://www.google.com/maps/@49.1621211,-122.6416664,3a,75y,100h,90t/data=!3m6!1e1!3m4!1s-u8x4_P7E5D-O1_6Z3m6_A!2e0!7i16384!8i8192"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute bottom-2 right-2 bg-white/90 px-2 py-1 rounded text-[10px] font-bold text-primary-black shadow-sm hover:bg-primary-green hover:text-white transition-colors z-10"
-                  >
-                    3D Street View
-                  </a>
-                </div>
-
-                {/* Working Hours */}
-                <div className="text-[14px] lg:text-[13px] font-nunito text-primary-black sm:min-w-[180px]">
-                  <p className="font-bold mb-2 lg:mb-1">Working Hours</p>
-                  <p className="flex justify-between gap-3 mb-1 lg:mb-0">
-                    <span>Monday to Friday :</span>
-                    <span>8:30am-7:00pm</span>
-                  </p>
-                  <p className="flex justify-between gap-3">
-                    <span>Saturday &amp; Sunday :</span>
-                    <span>9:00am-5:00pm</span>
-                  </p>
-                </div>
+            <div className="flex flex-col sm:flex-row gap-6 mb-6">
+              {/* Map */}
+              <div className="w-full sm:flex-1 rounded-[10px] overflow-hidden h-[180px] sm:h-[130px] relative">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10435.947027458502!2d-122.65553799218746!3d49.16285959999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d22c82a4bc57%3A0x6a99a60503a6347e!2sWalnut%20Grove%20Animal%20Hospital%20Langley!5e0!3m2!1sen!2sus!4v1729006985870!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <a
+                  href="https://www.google.com/maps/@49.1621211,-122.6416664,3a,75y,100h,90t/data=!3m6!1e1!3m4!1s-u8x4_P7E5D-O1_6Z3m6_A!2e0!7i16384!8i8192"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-2 right-2 bg-white/90 px-2 py-1 rounded text-[10px] font-bold text-primary-black shadow-sm hover:bg-primary-green hover:text-white transition-colors z-10"
+                >
+                  3D Street View
+                </a>
               </div>
 
-              <div className="flex items-center gap-2 mb-4">
+              {/* Working Hours */}
+              <div className="text-[14px] font-nunito text-primary-black sm:min-w-[220px]">
+                <p className="font-bold mb-2 text-[15px]">Working Hours</p>
+                <p className="flex justify-between gap-3 mb-1.5">
+                  <span className="font-medium">Monday to Friday :</span>
+                  <span>8:30am-7:00pm</span>
+                </p>
+                <p className="flex justify-between gap-3">
+                  <span className="font-medium">Saturday &amp; Sunday :</span>
+                  <span>9:00am-5:00pm</span>
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-[#F0EAF8]">
+              {/* Location Address */}
+              <div className="flex items-center gap-2">
                 <Image
                   src="/icons/location.svg"
                   alt="location"
@@ -179,14 +162,13 @@ export const ContactContainer = () => {
                   rel="noopener noreferrer"
                   className="text-[14px] font-nunito font-medium text-primary-black underline hover:text-primary-green transition-colors"
                 >
-                  101A-20995 88 Ave
-                  <br />
-                  Langley, BC V1M2C9, Canada
+                  101A-20995 88 Ave, Langley, BC V1M2C9, Canada
                 </a>
               </div>
 
-              <CtaButton
-                icon="/icons/phoneOutline.svg"
+              {/* Telephone button directly displaying phone number without attached icon badge */}
+              <button
+                type="button"
                 onClick={() => {
                   if (/Mobi|Android/i.test(navigator.userAgent)) {
                     window.location.href = `tel:${HOSPITAL_PHONE_TEL}`;
@@ -197,91 +179,10 @@ export const ContactContainer = () => {
                     });
                   }
                 }}
+                className="bg-primary-green text-white rounded-[18px] text-[16px] px-6 py-2.5 font-nunito font-semibold transition-all duration-500 hover:shadow-[inset_0px_0px_20px_0px_#FFF153] w-full sm:w-auto text-center"
               >
-                {hospitalCopied ? "Number Copied!" : "Call In An Emergency"}
-              </CtaButton>
-            </div>
-
-            {/* For After Hour Emergencies */}
-            <div className="bg-[#FFFCF7] rounded-[16px] p-5 shadow-[0px_0px_30px_0px_rgba(87,87,86,0.08)] border border-[#F0EAF8]">
-              <h3 className="font-nunito font-bold text-[20px] text-primary-black mb-3 pb-2 border-b-[3px] border-[#E7D2FF] w-fit">
-                For After Hour Emergencies
-              </h3>
-              <p className="text-[14px] font-nunito font-medium text-primary-black leading-[160%] mb-4">
-                We advise that you contact the pet emergency centre shown below,
-                they&apos;ll take care of your pet in an emergency in case we
-                aren&apos;t available!
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 mb-4">
-                {/* Map */}
-                <div className="w-full sm:flex-1 rounded-[10px] overflow-hidden h-[150px] sm:h-[100px]">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.3!2d-122.67!3d49.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d8!2sAnimal%20Emergency%20Clinic%20of%20the%20Fraser%20Valley!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                  <a
-                    href="https://www.google.com/maps/@49.1174911,-122.6565166,3a,75y,180h,90t/data=!3m6!1e1!3m4!1sS1_S2_S3_S4_S5!2e0!7i16384!8i8192"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute bottom-2 right-2 bg-white/90 px-2 py-1 rounded text-[10px] font-bold text-primary-black shadow-sm hover:bg-primary-green hover:text-white transition-colors z-10"
-                  >
-                    3D Street View
-                  </a>
-                </div>
-
-                {/* Clinic Name */}
-                <div className="sm:min-w-[160px] text-[14px] lg:text-[13px] font-nunito">
-                  <a
-                    href="https://maps.google.com/?q=Unit+302+6325+204th+Street+Langley+BC"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-primary-black underline hover:text-primary-green transition-colors"
-                  >
-                    Animal Emergency Clinic of the Fraser Valley
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2 mb-4">
-                <Image
-                  src="/icons/location.svg"
-                  alt="location"
-                  width={18}
-                  height={20}
-                />
-                <a
-                  href="https://maps.google.com/?q=Unit+302+6325+204th+Street+Langley+BC+V3Y+3B3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[14px] font-nunito font-medium text-primary-black underline hover:text-primary-green transition-colors"
-                >
-                  #Unit 302 – 6325 204th Street Langley,
-                  <br />
-                  British Columbia Canada V3Y 3B3
-                </a>
-              </div>
-
-              <CtaButton
-                icon="/icons/phoneOutline.svg"
-                onClick={() => {
-                  if (/Mobi|Android/i.test(navigator.userAgent)) {
-                    window.location.href = `tel:${EMERGENCY_PHONE_TEL}`;
-                  } else {
-                    navigator.clipboard.writeText(EMERGENCY_PHONE).then(() => {
-                      setEmergencyCopied(true);
-                      setTimeout(() => setEmergencyCopied(false), 2000);
-                    });
-                  }
-                }}
-              >
-                {emergencyCopied ? "Number Copied!" : EMERGENCY_PHONE}
-              </CtaButton>
+                {hospitalCopied ? "Number Copied!" : HOSPITAL_PHONE}
+              </button>
             </div>
           </div>
         </div>

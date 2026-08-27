@@ -42,8 +42,8 @@ export const getHospitalSchema = () => ({
     },
   ],
   sameAs: [
-    "https://www.facebook.com/walnutgroveanimalhospitalga/",
-    "https://www.instagram.com/walnutgroveanimalhospital/",
+    "https://www.facebook.com/walnutgroveanimalhospitalbc",
+    "https://www.instagram.com/walnutgroveanimalhospitalbc/",
   ],
 });
 
