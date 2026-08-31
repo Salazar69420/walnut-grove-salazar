@@ -51,9 +51,9 @@ const HomeContainer = ({ team }: { team?: any[] }) => {
         <div className="absolute bottom-8 lg:bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col lg:flex-row gap-4 lg:gap-8 px-6 w-full lg:w-[90%] max-w-[1296px] justify-center">
           {[
             {
-              stat: "10000+",
+              stat: "400k+",
               label: "Cases",
-              sub: "Served over 500+ pets!",
+              sub: "Providing compassionate medical care",
             },
             {
               stat: "40+",
