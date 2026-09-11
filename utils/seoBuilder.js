@@ -4,23 +4,33 @@ import { client } from "../sanity/lib/client";
 import { urlFor } from "../sanity/lib/image";
 
 export const getPageData = async (type) => {
-  const query = `*[_type == "${type}"][0]`;
-  const data = await client.fetch(query);
-  return data;
+  try {
+    const query = `*[_type == "${type}"][0]`;
+    const data = await client.fetch(query);
+    return data;
+  } catch (error) {
+    console.warn(`[Sanity] Could not fetch page data for type: ${type}`);
+    return null;
+  }
 };
 
 export const getProductMetaData = async (slug) => {
-  const query = `*[_type == "product" && slug.current == $slug][0]{
-    title,
-    metaData {
-      metaTitle,
-      metaDescription,
-      metaImage,
-      canonical
-    }
-  }`;
-  const data = await client.fetch(query, { slug });
-  return data;
+  try {
+    const query = `*[_type == "product" && slug.current == $slug][0]{
+      title,
+      metaData {
+        metaTitle,
+        metaDescription,
+        metaImage,
+        canonical
+      }
+    }`;
+    const data = await client.fetch(query, { slug });
+    return data;
+  } catch (error) {
+    console.warn(`[Sanity] Could not fetch product meta data for slug: ${slug}`);
+    return null;
+  }
 };
 
 /**

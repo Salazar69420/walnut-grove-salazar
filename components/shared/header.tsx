@@ -152,6 +152,11 @@ export const Header = () => {
   const resourcesDropdownContent = {
     sections: [
       {
+        title: "Pet Health Blog",
+        description: "Veterinary tips, preventative guides, and clinic updates.",
+        href: "/blog",
+      },
+      {
         title: "Pet Food Recalls",
         description: "Latest safety alerts and recall updates for your pet.",
         href: "/resources/pet-food-recalls",

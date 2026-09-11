@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/blogs", destination: "/blog", permanent: true },
+      { source: "/blogs/:slug*", destination: "/blog/:slug*", permanent: true },
       { source: "/pet-library.pml", destination: "/resources/how-to-videos", permanent: true },
       { source: "/contact-us.pml", destination: "/contact", permanent: true },
       { source: "/links.pml", destination: "/resources/how-to-videos#important-links", permanent: true },

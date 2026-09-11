@@ -35,6 +35,7 @@ import {
   vaccinesPage,
 } from "./subServicePages";
 import { popupNotification } from "./popupNotification";
+import { blog } from "./blog";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -42,6 +43,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     servicesPage,
     aboutPage,
     faqPage,
+    blog,
     popupNotification,
     contactSubmission,
     anesthesiaPage,

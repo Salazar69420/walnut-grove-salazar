@@ -1,8 +1,9 @@
 /** @format */
 
 import { MetadataRoute } from "next";
+import { getAllBlogSlugs } from "@/utils/blogData";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://walnutgroveanimalclinic.com";
 
   const staticRoutes = [
@@ -11,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/faq",
     "/services",
+    "/blog",
     "/privacy-policy",
     "/terms-and-conditions",
     "/resources/how-to-videos",
@@ -51,5 +53,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...serviceRoutes];
+  const blogSlugs = await getAllBlogSlugs();
+  const blogRoutes = blogSlugs.map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...blogRoutes];
 }

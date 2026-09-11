@@ -39,6 +39,7 @@ const Footer = () => {
     {
       title: "Resources",
       links: [
+        { name: "Pet Health Blog", href: "/blog" },
         { name: "Pet Library", href: "/resources/how-to-videos" },
         { name: "Pet Food Recalls", href: "/resources/pet-food-recalls" },
         { name: "Poisonous Plants", href: "/resources/poisonous-plants" },

@@ -120,3 +120,48 @@ export const getPetFoodRecallsSchema = () => ({
     url: "https://www.vin.com/recallcenter/default.aspx",
   },
 });
+
+export const getBlogListingSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Pet Health & Veterinary Blog | Walnut Grove Animal Hospital",
+  description:
+    "Explore pet care advice, preventative health tips, and veterinary guides from Walnut Grove Animal Hospital in Langley, BC.",
+  url: `${hospitalUrl}blog`,
+  publisher: {
+    "@type": "VeterinaryCare",
+    name: hospitalName,
+    address: hospitalAddress,
+    telephone: hospitalPhone,
+  },
+});
+
+export const getBlogPostingSchema = (blog, imageUrl = "") => ({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: blog?.title || "Walnut Grove Animal Hospital Blog",
+  description: blog?.excerpt || blog?.metaData?.metaDescription || "",
+  image: imageUrl || hospitalLogo,
+  datePublished: blog?.publishedAt || new Date().toISOString(),
+  dateModified: blog?.publishedAt || new Date().toISOString(),
+  author: {
+    "@type": "Person",
+    name: blog?.author?.name || "Walnut Grove Veterinary Team",
+    jobTitle: blog?.author?.role || "Veterinarian",
+  },
+  publisher: {
+    "@type": "VeterinaryCare",
+    name: hospitalName,
+    logo: {
+      "@type": "ImageObject",
+      url: hospitalLogo,
+    },
+    address: hospitalAddress,
+    telephone: hospitalPhone,
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `${hospitalUrl}blog/${blog?.slug}`,
+  },
+});
+
