@@ -103,9 +103,9 @@ export const ContactContainer = () => {
         {/* Hospital Location & Hours Section */}
         <div className="mt-12 lg:mt-16 mb-12 lg:mb-16">
           <div className="w-full max-w-[784px] mx-auto bg-[#FFFCF7] rounded-[24px] lg:rounded-[16px] p-6 lg:p-8 shadow-[0px_0px_30px_0px_rgba(87,87,86,0.08)] border border-[#F0EAF8]">
-            <h2 className="font-nunito font-bold text-[22px] lg:text-[24px] text-primary-black mb-3 pb-2 border-b-[3px] border-[#E7D2FF] w-fit">
+            <h1 className="font-nunito font-bold text-[22px] lg:text-[24px] text-primary-black mb-3 pb-2 border-b-[3px] border-[#E7D2FF] w-fit">
               Our Location & Working Hours
-            </h2>
+            </h1>
             <p className="text-[14px] font-nunito font-medium text-primary-black leading-[160%] mb-4">
               In the event of an emergency during our normal office hours,
               please proceed directly to our practice and call while on the way.

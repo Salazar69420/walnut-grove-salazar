@@ -57,9 +57,9 @@ export const PreventativeContainer = ({ faqs }: { faqs?: any[] }) => {
               height={87}
               width={87}
             />
-            <h2 className="text-[28px] lg:text-[48px] text-center lg:text-left font-otomanopee-one leading-tight lg:leading-[120%] text-primary-black uppercase">
+            <h1 className="text-[28px] lg:text-[48px] text-center lg:text-left font-otomanopee-one leading-tight lg:leading-[120%] text-primary-black uppercase">
               PREVENTATIVE CARE
-            </h2>
+            </h1>
           </div>
 
           <div className="space-y-4">

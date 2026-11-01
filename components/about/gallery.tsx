@@ -33,10 +33,10 @@ export const Gallery = () => {
           className="w-[56px] lg:w-[87px] h-auto"
         />
 
-        <h1 className="text-[24px] lg:text-[32px] max-w-[562px] text-center lg:text-left font-normal leading-tight lg:leading-[38px] text-primary-black uppercase font-otomanopee-one">
+        <h2 className="text-[24px] lg:text-[32px] max-w-[562px] text-center lg:text-left font-normal leading-tight lg:leading-[38px] text-primary-black uppercase font-otomanopee-one">
           A Closer Look at Our Clinic <br />
           and our community
-        </h1>
+        </h2>
       </div>
 
       <div className="mt-4 w-full flex items-center justify-center text-center lg:text-left">

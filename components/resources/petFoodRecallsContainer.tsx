@@ -29,10 +29,10 @@ export const PetFoodRecallsContainer = () => {
             />
           </div>
           <div>
-            <h2 className="text-[28px] lg:text-[40px] font-otomanopee-one text-primary-black uppercase leading-[1.1]">
+            <h1 className="text-[28px] lg:text-[40px] font-otomanopee-one text-primary-black uppercase leading-[1.1]">
               Pet Food Recalls, <br className="hidden lg:block" /> Stay Informed
               On Your Pet&apos;s Nutrition
-            </h2>
+            </h1>
             <p className="text-[16px] lg:text-[20px] font-nunito font-medium text-primary-black leading-relaxed mt-4 max-w-[950px]">
               Keeping your pets safe starts with knowing what goes into their
               bowls. Stay updated with the latest pet food and product recalls

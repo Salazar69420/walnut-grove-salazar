@@ -76,10 +76,10 @@ export const HowToVideosContainer = () => {
               />
             </div>
             <div>
-              <h2 className="text-[28px] lg:text-[40px] font-otomanopee-one text-primary-black uppercase leading-[1.1]">
+              <h1 className="text-[28px] lg:text-[40px] font-otomanopee-one text-primary-black uppercase leading-[1.1]">
                 HOW TO VIDEOS, <br className="hidden lg:block" /> PRACTICAL PET
                 CARE STRAIGHT FROM OUR TEAM
-              </h2>
+              </h1>
               <p className="text-[16px] lg:text-[20px] font-nunito font-medium text-primary-black leading-relaxed mt-4 max-w-[950px]">
                 Caring for your pet doesn&apos;t stop at the clinic. Our video
                 library offers trusted, easy-to-follow guidance from our

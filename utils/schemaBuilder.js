@@ -1,7 +1,7 @@
 /** @format */
 
 const hospitalName = "Walnut Grove Animal Hospital";
-const hospitalUrl = "https://walnutgroveanimalclinic.com/";
+const hospitalUrl = "https://www.walnutgroveanimalclinic.com/";
 const hospitalPhone = "(604) 888-2628";
 const hospitalLogo = `${hospitalUrl}assets/logo.png`;
 const hospitalAddress = {
@@ -41,6 +41,7 @@ export const getHospitalSchema = () => ({
       closes: "17:00",
     },
   ],
+  hasMap: "https://maps.google.com/?q=101A-20995+88+Ave+Langley+BC+V1M2C9",
   sameAs: [
     "https://www.facebook.com/walnutgroveanimalhospitalbc",
     "https://www.instagram.com/walnutgroveanimalhospitalbc/",
@@ -165,3 +166,16 @@ export const getBlogPostingSchema = (blog, imageUrl = "") => ({
   },
 });
 
+
+/** FAQPage structured data from the same questions and answers the page shows. */
+export const getFaqPageSchema = (faqs = []) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: (faqs || [])
+    .filter((f) => f && f.question && f.answer)
+    .map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: typeof f.answer === "string" ? f.answer : String(f.answer) },
+    })),
+});

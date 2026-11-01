@@ -18,11 +18,11 @@ export const Team = ({ team }: { team?: any[] }) => {
           width={87}
           className="hidden lg:block w-[56px] lg:w-[87px] h-auto"
         />
-        <h1 className="text-[24px] lg:text-[32px] max-w-[720px] text-center lg:text-left font-nunito font-normal z-1 leading-tight lg:leading-[38px] text-primary-black uppercase font-otomanopee-one">
+        <h2 className="text-[24px] lg:text-[32px] max-w-[720px] text-center lg:text-left font-nunito font-normal z-1 leading-tight lg:leading-[38px] text-primary-black uppercase font-otomanopee-one">
           Meet Our Team,
           <br className="hidden lg:block" />
           Experienced, Passionate & Dedicated!
-        </h1>
+        </h2>
       </div>
       <div className="mt-4 w-full text-center lg:text-left">
         <p className="text-primary-black max-w-full lg:max-w-[730px] text-[16px] lg:text-[22px] leading-relaxed lg:leading-[28px] font-medium">

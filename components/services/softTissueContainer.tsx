@@ -58,9 +58,9 @@ export const SoftTissueContainer = ({ faqs }: { faqs?: any[] }) => {
               width={87}
               className="w-[54px] lg:w-[87px] h-auto"
             />
-            <h2 className="text-[28px] lg:text-[48px] text-center lg:text-left font-otomanopee-one leading-tight lg:leading-[120%] text-primary-black uppercase">
+            <h1 className="text-[28px] lg:text-[48px] text-center lg:text-left font-otomanopee-one leading-tight lg:leading-[120%] text-primary-black uppercase">
               SOFT TISSUE, EYE & EAR PROCEDURES
-            </h2>
+            </h1>
           </div>
 
           <div className="space-y-4">
