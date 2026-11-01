@@ -44,8 +44,9 @@ const FaqItem = ({ question, answer }: Faq) => {
   );
 };
 
-export const AboutFaq = ({ faqs }: { faqs?: Faq[] }) => {
+export const AboutFaq = ({ faqs, asMain = false }: { faqs?: Faq[]; asMain?: boolean }) => {
   if (!faqs || faqs.length === 0) return null;
+  const Heading = asMain ? "h1" : "h2";
 
   return (
     <div
@@ -60,10 +61,10 @@ export const AboutFaq = ({ faqs }: { faqs?: Faq[] }) => {
           width={87}
           className="w-[56px] lg:w-[87px] h-auto"
         />
-        <h2 className="text-[24px] lg:text-[32px] text-center font-nunito font-normal z-1 leading-tight lg:leading-[38px] text-primary-black uppercase font-otomanopee-one">
+        <Heading className="text-[24px] lg:text-[32px] text-center font-nunito font-normal z-1 leading-tight lg:leading-[38px] text-primary-black uppercase font-otomanopee-one">
           Answers to the Most Common <br className="hidden lg:block" />
           Questions that pet parent’s ask us!
-        </h2>
+        </Heading>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">

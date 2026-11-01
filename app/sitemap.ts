@@ -4,7 +4,7 @@ import { MetadataRoute } from "next";
 import { getAllBlogSlugs } from "@/utils/blogData";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://walnutgroveanimalclinic.com";
+  const baseUrl = "https://www.walnutgroveanimalclinic.com";
 
   const staticRoutes = [
     "",

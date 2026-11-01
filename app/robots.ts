@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/studio/",
     },
-    sitemap: "https://walnutgroveanimalclinic.com/sitemap.xml",
+    sitemap: "https://www.walnutgroveanimalclinic.com/sitemap.xml",
   };
 }

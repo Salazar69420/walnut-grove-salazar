@@ -1,0 +1,27 @@
+# Walnut Grove Animal Hospital
+
+> A veterinary clinic in Langley, British Columbia, caring for dogs, cats and small pets.
+
+- Address: 101A-20995 88 Ave, Langley, BC V1M 2C9, Canada
+- Phone: (604) 888-2628
+- Hours: Monday to Friday 8:30am to 7:00pm; Saturday and Sunday 9:00am to 5:00pm
+- Website: https://www.walnutgroveanimalclinic.com
+
+## Services
+- [Preventive care and wellness exams](https://www.walnutgroveanimalclinic.com/services/preventative-care)
+- [Vaccines](https://www.walnutgroveanimalclinic.com/services/vaccines)
+- [Puppy and kitten care](https://www.walnutgroveanimalclinic.com/services/puppy-kitten-care)
+- [Dental care](https://www.walnutgroveanimalclinic.com/services/dental-services)
+- [Surgery](https://www.walnutgroveanimalclinic.com/services/pet-surgery) and [spay and neuter](https://www.walnutgroveanimalclinic.com/services/spay-neuter)
+- [X-ray](https://www.walnutgroveanimalclinic.com/services/pet-x-ray), [ultrasound](https://www.walnutgroveanimalclinic.com/services/ultrasound-services), [bloodwork](https://www.walnutgroveanimalclinic.com/services/bloodwork) and [lab services](https://www.walnutgroveanimalclinic.com/services/lab-services)
+- [Parasite prevention](https://www.walnutgroveanimalclinic.com/services/parasite-prevention) and [microchipping](https://www.walnutgroveanimalclinic.com/services/microchipping)
+- [Pet boarding](https://www.walnutgroveanimalclinic.com/services/pet-boarding-services)
+- [Small mammal medicine](https://www.walnutgroveanimalclinic.com/services/small-mammal-medicine)
+- [All services](https://www.walnutgroveanimalclinic.com/services)
+
+## Helpful pages
+- [Frequently asked questions](https://www.walnutgroveanimalclinic.com/faq)
+- [Contact and hours](https://www.walnutgroveanimalclinic.com/contact)
+- [Pet health blog](https://www.walnutgroveanimalclinic.com/blog)
+- [Plants poisonous to pets](https://www.walnutgroveanimalclinic.com/resources/poisonous-plants)
+- [Pet food recalls](https://www.walnutgroveanimalclinic.com/resources/pet-food-recalls)
